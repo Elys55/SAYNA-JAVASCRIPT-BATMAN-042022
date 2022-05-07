@@ -1,0 +1,183 @@
+/* les polices */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@400;700&display=swap');
+/* les variables pour les couleurs */
+
+/* les bases (reset)*/
+*,*::before,*::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background: #000;
+    line-height: 30px;
+}
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 46px;
+
+    text-transform: uppercase;
+    line-height: 48px;
+}
+#quiz1 h1, #quiz2 h1{
+    font-size: 35px!important;
+}
+p{
+    font-family:'Space Grotesk', sans-serif;
+    font-size: 22px;
+}
+
+button {
+    color: white;
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    margin: 0 15px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(177, 51, 19));
+    border: none;
+}
+
+
+/* header */
+header{
+    background-image: url(/Assets/Illustrations/Game/Batgame1.png);
+}
+    /* la navigation  */
+    nav {
+        margin-left: 7%;
+        margin-right: 7%;
+        padding: 3% 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background: red; */
+        border: 3px solid rgba(255, 255, 255, 0.247);
+        border-top: none;
+    }
+    .menus{
+        width: 18%;
+    }
+    nav a{
+        font-family:'Rajdhani', sans-serif;
+        font-size: 28px;
+
+        text-decoration: none;
+        color: #fff;
+        margin-right: 20px;
+    }
+    nav a.active{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    /* la partie accueil */
+    .accueil {
+        height: 100vh;
+        /* background: red; */
+        margin-left: 7%;
+        margin-right: 7%;
+        border: 3px solid rgba(255, 255, 255, 0.247);
+        border-bottom: none;
+
+        position: relative;
+    }
+    .accueil-content {
+        width: 50%;
+        text-align: center;
+        position: absolute;
+        top: 25%;
+        left: -140px;
+    }
+        /* les réseaux sociaux à droite */
+    .social-right{
+        position: absolute;
+        right: -55px;
+        top: 47%;
+    }
+    .social-right img{
+        display: block;
+    }
+    .réseaux{
+        width: 40px;
+    }
+    .réseaux img {
+        margin: 25px 37px 12px;
+    }
+/* main */
+  .flèche {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 5%;
+      margin-bottom: 13%;
+  }
+    /* quiz niveau 1 */
+    #quiz1 {
+        margin-left: 7%;
+        margin-right: 7%;
+        padding-left: 5%;
+        border: 3px solid rgba(255, 255, 255, 0.247);
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .one p:first-child{
+        margin-top: 7%;
+        margin-bottom: 4%;
+       
+    }
+    .one p:nth-child(2), 
+    .one p:nth-child(3),
+    .one p:nth-child(4)
+    {
+        padding: .8em .2em;
+        margin-bottom: .5em;
+        background: #C4C4C4;
+        width: 50%;
+    }
+
+    /* quiz 2 */
+    #quiz2{
+        padding-top: 13%;
+        margin-left: 7%;
+        margin-right: 7%;
+        padding-left: 5%;
+    }
+    #quiz2 h1 {
+        text-align: center;
+    }
+    #quiz2 div {
+        margin: 3% 8%;
+    }
+    #quiz2 button{
+        margin-left: 42%;
+        margin-bottom: 11%;
+    }
+
+
+/* partie footer */
+footer{
+    text-align: center;
+    padding-bottom: 5%;
+}
+.inline {
+    display: inline;
+    font-size: 12px;
+}
+.parentLogo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+.logoSayna, .logoSocial {
+    display: flex;
+    text-align: center;
+    gap: 1em;
+}
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security

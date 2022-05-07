@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@400;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Typo couleur */
+:root{
+    --yellow-ad-color:#FFFF00;
+    --moon-ad-color:#F8F184;
+    --blue-ad-color:#19587D;
+    --red-ad-color:#B11313;
+    --black-ad-color:#0D0E09;
+    --white-ad-color:#FFFFFF;
+    --grey-ad-color:#C4C4C4;
+    --noir-ad-color:#000000;
+    --hovered-ad-color:#EDDEBF,#890008;
+}
+/* Pour le titre */
+h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+/* HEADER */
+header{
+    background-image: url(../Illustrations/Home/Bathome1.png);
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 3% 5%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border: 3px solid  #bcbbbd70;
+    border-top: none;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+.navbar li{
+    list-style: none;
+    color: #FFFFFF;
+}
+.navbar a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 2em;
+    font-family:'Rajdhani', sans-serif;
+    margin: 20px; 
+    cursor: pointer;
+}
+.navbar a.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.landing{
+    position: relative;
+    min-height: 100vh;
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 3px solid  #bcbbbd70;
+    border-bottom: none;
+    position: relative;
+}
+.landing .contenu{
+    text-align: center;
+    margin-top: 20%;
+    
+}
+.landing .contenu p{
+    color: #FFFFFF;
+    margin-left: 15%;
+}
+p{
+    font-family:'Space Grotesk', sans-serif;
+    font-size: 1em;
+}
+.btn{
+    font-size: 1em;
+    color: #FFFFFF;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(177, 51, 19));
+    padding: 10px;
+    display: inline-block;
+    margin: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    align-items: center;
+} 
+.btn:hover{
+    letter-spacing: 4px;
+}
+/* Pour le icone a droite */
+.media{
+    position: absolute;
+    right: -66px;
+    top: 25%;
+}
+.media i{
+    display: block;
+    flex-direction: column;
+    color: #FFFFFF;
+    margin: 5px;
+    transition: .5s;
+    cursor: pointer;
+}
+.media i:hover{
+    color: #FFFF00;
+}
+
+.icons{
+    margin: 25px 37px 12px;
+}
+.social{
+    margin: 10px;
+}
+
+/* Batman au cinema */
+.batcine{
+    background-color: #000000; 
+}
+.cine{
+    border: 3px solid  #bcbbbd70;
+    border-top: none;
+    margin-left: 7%;
+    margin-right: 7%;
+    position: relative;  
+}
+.img{
+   margin-left: 50%;
+    margin-top: 20px;
+    width: 50px;
+}
+.acteur{
+    color: #FFFFFF;
+    margin-left: 2%;
+    padding: 20px;
+}
+.titre{
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+}
+
+/* slider image */
+.cardOne{
+    display: flex;
+    gap: 3em;
+    margin-left: 2%;
+    padding: 20px;
+}
+.act span{
+    color: #FFF000;
+    margin-left: 40%;
+}
+.act img{
+    position: relative;
+    top: 70px;
+    margin-left: 8%;
+}
+.act{
+    position: relative;
+    bottom: 180px;
+    opacity: 0;
+}
+.act-visible{
+    opacity: 1;
+    transition: .5s;
+}
+.act div{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(177, 51, 19));
+    padding: 0.5em 1em;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family:'Space Grotesk', sans-serif;
+}
+/* Effet au survole */
+.cardA:hover, .cardB:hover, .cardC:hover{
+    transform: scale(1.2);
+    transition: .6s;
+    cursor: pointer;
+}
+/* Empiler les images les unes, les autres */
+.slider{
+    height: 75vh;
+    position: relative;
+    background-image: url(/Assets/Illustrations/Home/Batslider1.png);
+    animation:model 35s ease-in-out infinite alternate forwards;
+   margin-top: -120px;
+}
+.slider .alfred{
+    height: 75vh;
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 3px solid #bcbbbd70;
+    border-top: none;
+    border-bottom: none;
+}
+/* Effet changement des images */
+@keyframes model {
+    0%{
+        background-image: url(/Assets/Illustrations/Home/Batslider1.png);
+    }
+    10%{
+        background-image: url(/Assets/Illustrations/Home/Batslider2.png);
+    }
+    20%{
+        background-image: url(/Assets/Illustrations/Home/Batslider3.png);
+    }
+    30%{
+        background-image: url(/Assets/Illustrations/Home/Batslider4.png);
+    }
+    40%{
+        background-image: url(/Assets/Illustrations/Home/Batslider5.png);
+    }
+    50%{
+        background-image: url(/Assets/Illustrations/Home/Batslider6.png);
+    }
+    60%{
+        background-image: url(/Assets/Illustrations/Home/Batslider7.png);
+    }
+    70%{
+        background-image: url(/Assets/Illustrations/Home/Batslider8.png);
+    }
+    80%{
+        background-image: url(/Assets/Illustrations/Home/Batslider9.png);
+    }
+    90%{
+        background-image: url(/Assets/Illustrations/Home/Batslider10.png);
+    }
+    100%{
+        background-image: url(/Assets/Illustrations/Home/Batslider10.png);
+    }
+}
+/* Multimedia */
+.nemesis{
+   
+    background-color: #000000;
+}
+.villains{
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 3px solid #bcbbbd70;
+    border-top: none;
+    border-bottom: none;
+}
+.cardTwo{
+    display: flex;
+    gap: 3em;
+    margin-left: 2%;
+    padding: 20px;
+}
+
+.multimedia {
+    
+    background-color: #000000;
+    margin-top: -150px;
+    padding: 50px;
+}
+.movie{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    padding: 7%;
+    border: 3px solid #bcbbbd70;
+    border-top: none; 
+    border-bottom: none;
+    margin-top: -50px;  
+}
+.multimedia h1{
+    color: #FFFFFF;
+    margin-left: 7%;
+}
+
+.multimedia .none{
+    display: none;
+}
+.multimedia .none-active {
+    display: inline-flex;
+}
+.cardScroll{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 50%;
+    background-image: linear-gradient(to left top, #19587d, #56708f, #8089a1, #a4a6b2, #c4c4c4);
+    line-height: 20px;
+    border-radius: 15px;
+    color: #C4C4C4;
+    font-size: small;
+}
+
+.descript .card-title{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+.descript .card-title2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    margin-bottom: 1em;
+    margin-top: -3%;
+}
+
+.cardScroll p{
+    font-size: 12px;
+    text-align:justify;
+    margin: 7px;
+    margin-top: 0%;
+}
+
+.scroll-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+.bAnnonce{
+    margin-left: -5%;
+}
+.bAnnonce img:hover{
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+    transition: .4s;
+}
+.précédent{
+    margin-left: -4%;
+}
+.suivant{
+    margin-right: -5%;
+}
+/* formulaire */
+.formulaires {
+    background-image: linear-gradient(to left top, #2e363a, #32373d, #444549, #434447, #3c4137);
+    color: rgba(255, 255, 255, 0.589);
+    position: relative;
+    margin-top: -10%;
+}
+.formulaires .parent-centre {
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 3px solid #bcbbbd70;
+    border-top: none; 
+    border-bottom: none;
+}
+.formulaires h1 {
+    color: #FFF;
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 10%;
+}
+.formulaires h2 {
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 6%;
+}
+
+.centre {
+    padding: 0 20%;
+}
+
+.formulaires input, .formulaires select {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: inherit;
+    padding-bottom: 3px;
+}
+.formulaires .para {
+    font-size: 18px;
+    margin-top: 2%;
+}
+.formulaires select {
+    margin-bottom: 4%;
+}
+
+.formulaires ::placeholder, select{
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 15px;
+}
+
+.outline-degrade{
+    background: inherit;
+    border: 1.5px solid #19587d;
+    border-image: linear-gradient(to left top, #19587d, #56708f, #8089a1, #a4a6b2, #c4c4c4);
+    border-image-slice: 1;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 15px;
+    cursor: pointer;
+}
+.outline-degrade:hover{
+    background-image: linear-gradient(to left top, #19587d, #56708f, #8089a1, #a4a6b2, #c4c4c4);
+    border: none;
+   transition: .4s;
+}
+.bouttonSérie {
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+.formulaires button.confirm {
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(177, 51, 19));
+    color: #FFFFFF;
+    border: none;
+    padding: 5px;
+    font-size: 1em;
+    width: 20%;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    width: 20px;
+}
+/* le pop-up */
+.pop-up {
+    text-transform: uppercase;
+    font-family:  'Rajdhani', sans-serif;
+    width: 80%;
+    height: 70vh;
+    font-size: 30px;
+    color: white;
+    background-image: linear-gradient(to left top, #19587d, #56708f, #8089a1, #a4a6b2, #c4c4c4);
+    margin-left: 10%;
+    border-radius: 30px;
+   position: absolute;
+   bottom: 60px;
+   border: 1px solid rgba(255, 255, 255);
+   display: none;
+}
+.pop-up span {
+    position: relative;
+    top: 40%;
+    left: 40%;
+}
+.popUp-reveal {
+    display: block;
+}
+/* partie citation et footer */
+.citationBox{
+ height: 80vh;
+ background-color: #000000;
+ color: #FFFFFF;
+ margin-top: -4%;
+}
+.citation {
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 3px solid #bcbbbd70;
+    border-top: none; 
+    border-bottom: none;
+    height: 80vh;
+    text-align: center;
+    padding-top: 16%;
+}
+.dark {
+    margin-top: 1.5em;
+    color: #C4C4C4;
+}
+.quote1, .quote2 {
+    position: relative;
+}
+.quote1 {
+    bottom: 35px;
+    right: 330px;
+}
+.quote2 {
+    top: 250px;
+    left: 300px;
+}
+.dot {
+    margin-top: 1.5%;
+}
+.dot i {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    color: #19587d;
+    position: relative;
+}
+
+.reveal {
+    display: none;
+}
+.reveal-visible {
+    display: block;
+}
+footer{
+    text-align: center;
+    padding-bottom: 5%;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.inline {
+    display: inline;
+}
+.parentLogo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+.logoSayna {
+    display: flex;
+    text-align: center;
+    gap: 1em;
+    transition: .5s;
+}
+.logoSocial{
+    display: flex;
+    text-align: center;
+    gap: 1em;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+.logoSocial:hover{
+    color: #FFF000;
+}
+.logoSayna:hover{
+    color: #FFFF00;
+}
+/* Activate in Js */
+.visible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.49,0,.03,1);
+}
+/* Fondu effet */
+.fondu {
+    opacity: 0;
+}
+.fondu-visible {
+    opacity: 1;
+    transition: 1s cubic-bezier(.49,0,.03,1);
+}
+/* Zoom effet */
+.zoom {
+    transform: scale(0);
+}
+.zoom-visible {
+    transform: scale(1);
+    transition: 1s;
+}
